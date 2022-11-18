@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../login_signup_pages/LIorSUscreen.dart';
+import '../explorePage/exploreHome.dart';
 
 class DashboardHome extends StatefulWidget {
   const DashboardHome({Key? key}) : super(key: key);
@@ -14,21 +15,21 @@ class _DashboardHomeState extends State<DashboardHome> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    LIorSUscreen(),
+  Text(
+  'school stuff screen',
+  style: optionStyle,
+  ),
+    ExploreHome(),
     Text(
-      'Index 1: Business',
+      'homescreen',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'friends screen',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Settings',
+      'me screen',
       style: optionStyle,
     ),
   ];

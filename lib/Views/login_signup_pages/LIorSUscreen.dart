@@ -22,12 +22,12 @@ class LIorSUscreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        "Flash Mob",
+                        "UNISPHERE",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
-                            fontSize: 48, fontWeight: FontWeight.w700),
+                            fontSize: 38, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
                       Text(
@@ -47,7 +47,7 @@ class LIorSUscreen extends StatelessWidget {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) => LoginScreen()));
                                 }),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             BigButton(
