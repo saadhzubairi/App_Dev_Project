@@ -216,22 +216,6 @@ class __ActionBarState extends State<_ActionBar> {
       top: false,
       child: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              border: Border(
-                right: BorderSide(
-                  width: 2,
-                  color: Theme.of(context).dividerColor,
-                ),
-              ),
-            ),
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Icon(
-                Icons.camera_alt,
-              ),
-            ),
-          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(left: 16.0),
@@ -240,25 +224,27 @@ class __ActionBarState extends State<_ActionBar> {
                 onChanged: (val) {
                   //controller.text = val;
                 },
-                style: const TextStyle(fontSize: 14),
-                decoration: const InputDecoration(
-                  hintText: 'Type something...',
-                  border: InputBorder.none,
-                ),
+
+                style: const TextStyle(fontSize: 18),
+                decoration: const InputDecoration(hintText: 'Type something...', border: InputBorder.none,),
                 //onSubmitted: (_) => _sendMessage(),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(
-              left: 12,
-              right: 24.0,
-            ),
+            padding: const EdgeInsets.only(bottom: 10,top: 10,right: 10),
             child: /*GlowingActionButton(
               color: AppColors.accent,
               icon: Icons.send_rounded,
               onPressed: _sendMessage,
-            )*/Container(color: Colors.black,height: 10,width: 10),
+            )*/InkWell(
+              splashColor: Colors.indigo,
+              onTap: (){print("object");},
+              child: Ink(height: 55,width: 55,
+                decoration: BoxDecoration(color: Colors.amber,borderRadius: BorderRadius.circular(100),),
+                child: Icon(Icons.send),
+              ),
+            ),
           ),
         ],
       ),
