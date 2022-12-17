@@ -69,13 +69,14 @@ class _DashboardHomeState extends State<DashboardHome> {
           ),
         ],
         leading: Align(
-            alignment: Alignment.centerRight,
-            child: IconBackground(
-              icon: Icons.search,
-              onTap: () {
-                print("to do search!");
-              },
-            )),
+          alignment: Alignment.centerRight,
+          child: IconBackground(
+            icon: Icons.search,
+            onTap: () {
+              print("to do search!");
+            },
+          ),
+        ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
