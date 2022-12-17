@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stream_chat_flutter/stream_chat_flutter.dart';
+import 'package:stream_chat_flutter_core/stream_chat_flutter_core.dart';
 import 'Views/loginSignupPages/LIorSUscreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return StreamChatCore(
           client: client,
-          child: child!,
+          child: ChannelsBloc(child: child!),
         );
       },
       home: const SelectUserScreen()/*const LIorSUscreen()*/,

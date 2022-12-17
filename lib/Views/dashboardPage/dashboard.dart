@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_phase_one/Views/friendsScreen/friendsScreen.dart';
+import 'package:project_phase_one/Views/userScreen/user_screen.dart';
 import 'package:project_phase_one/Widgets/avatar.dart';
 import 'package:project_phase_one/Widgets/icon_buttons.dart';
 import '../explorePage/exploreHome.dart';
 import '../myProfile/myProfilePage.dart';
+import 'package:project_phase_one/app.dart';
 
 class DashboardHome extends StatefulWidget {
   const DashboardHome({Key? key}) : super(key: key);
@@ -62,11 +64,12 @@ class _DashboardHomeState extends State<DashboardHome> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 24.0),
-            child: Avatar.small(
-              url:
-                  "https://www.pngitem.com/pimgs/m/219-2193218_avatar-clipart-png-transparent-png.png",
-            ),
+            child: Avatar.small(url: context.currentUserImage,onTap: (){
+              Navigator.of(context).push(ProfileScreen.route);
+            },),
+
           ),
+
         ],
         leading: Align(
           alignment: Alignment.centerRight,
