@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_phase_one/Views/explorePage/writeNewText.dart';
-import '../Widgets.dart';
+import '../../Widgets/Widgets.dart';
 import '../../Models/SearchedUsers.dart';
 
 class ExploreUserInfo extends StatelessWidget {

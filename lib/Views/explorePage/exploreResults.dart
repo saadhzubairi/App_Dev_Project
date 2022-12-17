@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../Widgets.dart';
+import '../../Widgets/Widgets.dart';
 import '../../Models/SearchedUsers.dart';
 
 class ExploreResults extends StatefulWidget {

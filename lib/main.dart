@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Views/login_signup_pages/LIorSUscreen.dart';
+import 'Views/loginSignupPages/LIorSUscreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {

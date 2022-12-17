@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_phase_one/Models/SearchedUsers.dart';
 import '../Views/explorePage/exploreUserInfo.dart';
-
+export 'avatar.dart';
+export 'icon_buttons.dart';
 class CoolTextField extends StatelessWidget {
   String? prompText;
   bool? isPassField;
@@ -61,7 +62,7 @@ class BigButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: radius ?? BorderRadius.circular(25),
           ),
-          backgroundColor: color ?? Colors.indigo.shade700,
+          backgroundColor: color ?? Colors.indigo.shade900,
           shadowColor: Colors.indigo.shade300),
       child: Text(
         text,
@@ -120,3 +121,5 @@ class ResultBoxes extends StatelessWidget {
     );
   }
 }
+
+

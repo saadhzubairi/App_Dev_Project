@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Widgets.dart';
+import 'package:project_phase_one/Views/loginSignupPages/signUpScreen.dart';
+import '../../Widgets/Widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../dashboardPage/dashboard.dart';
 
@@ -27,9 +28,6 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    Container(
-                        height: 200,
-                        child: Image(image: AssetImage("assets/man_book.png"))),
                     CoolTextField(prompText: "Username"),
                     CoolTextField(
                       prompText: "Password",
@@ -60,7 +58,9 @@ class LoginScreen extends StatelessWidget {
                       height: 10,
                     ),
                     OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => SignUpScreen()));},
+
                       style: ElevatedButton.styleFrom(
                           minimumSize: Size(200, 60),
                           shape: RoundedRectangleBorder(
@@ -69,10 +69,11 @@ class LoginScreen extends StatelessWidget {
                           backgroundColor: Colors.indigo.shade50,
                           shadowColor: Colors.white),
                       child: Text(
-                        "REGISTER",
+                        "SIGN UP",
                         style: GoogleFonts.montserrat(
                             fontSize: 20, fontWeight: FontWeight.w700),
                       ),
+
                     ),
                     SizedBox(
                       height: 20,
@@ -83,6 +84,25 @@ class LoginScreen extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.indigo))),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Divider(color: Colors.black),
+                    SizedBox(
+                      height: 30,
+                    ),
+
+                    InkWell(
+                      onTap: () {},
+                      child: Ink(
+                        child: Wrap(
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          children: [
+                            Image(image: AssetImage("assets/googlesignin.png"),height: 50), // <-- Use 'Image.asset(...)' here
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

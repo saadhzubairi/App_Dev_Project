@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_phase_one/Views/loginSignupPages/signUpScreen.dart';
 import 'loginScreen.dart';
-import '../Widgets.dart';
+import '../../Widgets/Widgets.dart';
 
 class LIorSUscreen extends StatelessWidget {
   const LIorSUscreen({Key? key}) : super(key: key);
@@ -55,7 +56,7 @@ class LIorSUscreen extends StatelessWidget {
                                 color: Colors.indigo.shade900,
                                 fun: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => LoginScreen()));
+                                      builder: (context) => SignUpScreen()));
                                 }),
                           ])
                     ],
