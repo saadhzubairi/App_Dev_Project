@@ -7,29 +7,14 @@ export 'icon_buttons.dart';
 class CoolTextField extends StatelessWidget {
   String? prompText;
   bool? isPassField;
-
-  CoolTextField({this.prompText, this.isPassField, Key? key}) : super(key: key);
+  TextEditingController? textEditingController;
+  CoolTextField({this.textEditingController,this.prompText, this.isPassField, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: TextField(
-        obscureText: isPassField ?? false,
-        enableSuggestions: false,
-        autocorrect: false,
-        decoration: InputDecoration(
-            labelText: prompText ?? '',
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 3, color: Colors.indigo.shade100),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 3, color: Colors.indigo),
-              borderRadius: BorderRadius.circular(15),
-            )),
-      ),
-    );
+      child: TextField(obscureText: isPassField ?? false, enableSuggestions: false, autocorrect: false, decoration: InputDecoration(labelText: prompText ?? '', enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 3, color: Colors.indigo.shade100), borderRadius: BorderRadius.circular(15),), focusedBorder: OutlineInputBorder(borderSide: const BorderSide(width: 3, color: Colors.indigo), borderRadius: BorderRadius.circular(15),)),),);
   }
 }
 
