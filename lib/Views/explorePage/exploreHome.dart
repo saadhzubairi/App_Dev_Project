@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_phase_one/Views/explorePage/exploreResults.dart';
 import '../../Widgets/Widgets.dart';
+import 'myContacts.dart';
 
 
 class ExploreHome extends StatelessWidget {
@@ -33,14 +34,14 @@ class ExploreHome extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  BigButton(
-                    text: "Filtered Search",
-                    fun: () {},
-                    size: const Size(200, 50),
-                    fontSize: 18,
-                    color: Colors.amber,
-                    textColor: Colors.indigo.shade800,
+                  BigButton(text: "Filtered Search", fun: () {}, size: const Size(200, 50), fontSize: 18, color: Colors.amber, textColor: Colors.indigo.shade800,),
+                  const SizedBox(
+                    height: 55,
                   ),
+                  BigButton(text: "Contacts", fun: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ContactsPageHolder()));
+                  }, size: const Size(140, 50), fontSize: 18, color: Colors.indigo.shade50, textColor: Colors.indigo.shade800,),
                 ],
               ),
             ),

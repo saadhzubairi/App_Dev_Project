@@ -64,9 +64,12 @@ class _DashboardHomeState extends State<DashboardHome> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 24.0),
-            child: Avatar.small(url: context.currentUserImage,onTap: (){
-              Navigator.of(context).push(ProfileScreen.route);
-            },),
+            child: Hero(
+              tag: 'hero-profile-picture',
+              child: Avatar.small(url: context.currentUserImage,onTap: (){
+                Navigator.of(context).push(ProfileScreen.route);
+              },),
+            ),
 
           ),
 

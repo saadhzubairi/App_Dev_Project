@@ -92,11 +92,9 @@ class MessageTile extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.indigo,
         onTap: (){
-
-          //TODO: OPEN TEXT MESSAGE!!
-
-          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ChatScreen()));
-
+          Navigator.of(context).push(
+            ChatScreen.routeWithChannel(channel),
+          );
         },
         child: Ink(
           decoration: BoxDecoration(
@@ -112,9 +110,7 @@ class MessageTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(Helpers.getChannelName(channel, context.currentUser!), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, fontSize: 18),),
-                      text == null
-                          ? Text("Last Seen ${lastSeen?? 0} minutes ago", style: const TextStyle(fontStyle: FontStyle.italic),)
-                          : Text(text.toString(), style: const TextStyle(fontWeight: FontWeight.bold),),
+                      _buildLastMessage()
                     ],
                   ),
                 ],
